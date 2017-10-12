@@ -1,7 +1,7 @@
 CleanVIPER Xcode Templates
 =====================
 
-# Xcode templates to automate working with (B)VIPER
+Xcode templates to automate working with (B)VIPER
 
 ## Installation
 
