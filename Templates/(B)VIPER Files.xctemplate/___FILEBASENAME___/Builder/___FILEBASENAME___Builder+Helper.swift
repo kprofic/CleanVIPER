@@ -18,20 +18,20 @@ public extension ___VARIABLE_ModuleName___Builder {
     // The missing pieces need to be passed as parameters here by implementers of `build___VARIABLE_ModuleName___()` protocol method
     // The example usage is like follows:
     // ```
-    // func buildLogin(delegate: ___VARIABLE_ModuleName___Delegate? = nil) -> UIViewController {
+    // func build___VARIABLE_ModuleName___(delegate: ___VARIABLE_ModuleName___Delegate? = nil) -> UIViewController {
     //     let dataManager = ___VARIABLE_ModuleName___DataManager()
     //
     //     return build___VARIABLE_ModuleName___(otherModulesBuilder: self, dataManager:dataManager, delegate:delegate)
     // }
     // ```
     //
-    // @param otherModulesBuilder - a module may require routing to other modules, this is the builder to other modules,
+    // @param otherModulesBuilder - a module may require routing to other modules, this is the builder that can make other modules,
     // usually it is the same object as implementer of `___VARIABLE_ModuleName___Builder`. It automatically infers the expected type
     // which is defined as the following typealias: ___VARIABLE_ModuleName___Router.OtherBuilders
     //
     // @param dataManager - since `___VARIABLE_ModuleName___Builder` is part of `___PROJECTNAME___UI` and we musn't have any dependency to `___PROJECTNAME___Data`
     // this has to be provided from outside. In theory this could be instantiated here. But that would introduce
-    // UI -> Data dependency which will be a violation of The Clean Architecture
+    // UI -> Data dependency which will be a violation of The Clean Architecture boundaries
     //
     // @param delegate - delegate of this module
     //
@@ -48,7 +48,7 @@ public extension ___VARIABLE_ModuleName___Builder {
         interactor.dataManager = dataManager
         presenter.interactor = interactor
         presenter.router = router
-        presenter.view = viewController;
+        presenter.view = viewController
         presenter.delegate = delegate
         interactor.output = presenter
         viewController.presenter = presenter
